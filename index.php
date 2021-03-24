@@ -10,17 +10,27 @@ require 'core/LogAbstract.php';
 require 'feofanov/LinearEquation.php';
 require 'feofanov/QuadraticEquation.php';
 require 'feofanov/MyLog.php';
+require 'feofanov/FeofanovException.php';
 
 $equation = new feofanov\QuadraticEquation();
 try
 {
-    $result = $equation->solve(5, 10, 3);
+    echo "Enter 3 values (a, b, c): \n\r";
+
+    $a = readline("Enter a: \n\r");
+    $b = readline("Enter b: \n\r");
+    $c = readline("Enter c: \n\r");
+
+    feofanov\MyLog::log("Equation: " .$a."x2+".$b."x+".$c."=0 \n\r");
+
+    $result = $equation->solve($a, $b, $c);
+
     $str = implode("; ", $result);
-    feofanov\MyLog::log($str);
+
+    feofanov\MyLog::log("Solution: ".$str."\n\r");
 }
-catch (Exception $exception)
+catch (feofanov\FeofanovException $exception)
 {
     feofanov\MyLog::log($exception->getMessage());
 }
-
 feofanov\MyLog::write();

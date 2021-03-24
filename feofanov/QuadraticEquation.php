@@ -21,7 +21,7 @@ class QuadraticEquation extends LinearEquation implements EquationInterface
         }
 
         $d = $this->Discriminant($a, $b, $c);
-
+        MyLog::log("It's a quadratic equation.\n\r");
         if ($d == 0)
         {
             return $this->x = [($b * (-1)) / (2 * $a)];
@@ -29,10 +29,11 @@ class QuadraticEquation extends LinearEquation implements EquationInterface
 
         if ($d < 0)
         {
-            throw new \Exception("Equation hasn't solutions.");
+            throw new FeofanovException("Equation hasn't solutions. \n\r");
         }
 
         return $this->x = [($b * (-1) - sqrt($d)) / (2 * $a), ($b * (-1) + sqrt($d)) / (2 * $a)];
+
     }
 
 }
