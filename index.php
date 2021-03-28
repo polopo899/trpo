@@ -3,9 +3,9 @@
 ini_set("display_errors", 1);
 error_reporting (-1);
 
-require 'core/EquationInterface.php';
-require 'core/LogInterface.php';
-require 'core/LogAbstract.php';
+require 'core/core/EquationInterface.php';
+require 'core/core/LogInterface.php';
+require 'core/core/LogAbstract.php';
 
 require 'feofanov/LinearEquation.php';
 require 'feofanov/QuadraticEquation.php';
@@ -15,6 +15,7 @@ require 'feofanov/FeofanovException.php';
 $equation = new feofanov\QuadraticEquation();
 try
 {
+    feofanov\MyLog::log("Version: " . trim(file_get_contents("version")) . "\n");
     echo "Enter 3 values (a, b, c): \n\r";
 
     $a = readline("Enter a: \n\r");
