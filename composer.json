@@ -1,0 +1,23 @@
+{
+  "name": "polopo899/trpo",
+  "type": "project",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/polopo899/trpo-lib.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/rok9ru/trpo-core.git"
+    }
+  ],
+  "require": {
+    "polopo899/trpo-lib": "^1.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "git symbolic-ref --short -q HEAD>version"
+    ]
+  }
+}

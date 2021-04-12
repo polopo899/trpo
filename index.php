@@ -3,14 +3,7 @@
 ini_set("display_errors", 1);
 error_reporting (-1);
 
-require 'core/core/EquationInterface.php';
-require 'core/core/LogInterface.php';
-require 'core/core/LogAbstract.php';
-
-require 'feofanov/LinearEquation.php';
-require 'feofanov/QuadraticEquation.php';
-require 'feofanov/MyLog.php';
-require 'feofanov/FeofanovException.php';
+require 'vendor/autoload.php';
 
 $equation = new feofanov\QuadraticEquation();
 try
