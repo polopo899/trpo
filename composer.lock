@@ -8,14 +8,17 @@
     "packages": [
         {
             "name": "polopo899/trpo-lib",
-            "version": "v1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/polopo899/trpo-lib.git",
-                "reference": "85b8be03fdffc7fc623adb225b89d79f92e760bf"
+                "reference": "bcc545fd6ab0888fe311801e1c94486b865cb933"
             },
             "require": {
                 "rok9ru/trpo-core": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
@@ -26,7 +29,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2021-04-12T11:36:55+00:00"
+            "time": "2021-04-15T06:25:09+00:00"
         },
         {
             "name": "rok9ru/trpo-core",
